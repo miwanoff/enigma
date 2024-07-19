@@ -1,0 +1,260 @@
+body {
+  font-family: "Roboto", sans-serif;
+  /* background-color: #000; */
+  /* color: #fff; */
+}
+
+.navbar {
+  background-color: transparent;
+  /* padding: 20px 0; */
+  /* position: fixed; */
+  width: 100%;
+}
+
+.navbar-brand .logo {
+  height: 80px;
+  border-radius: 50%;
+}
+
+.navbar-brand {
+  font-size: 16px;
+  color: #ffd700 !important;
+  font-weight: bold;
+}
+
+.nav-link {
+  font-size: 1rem;
+  margin-right: 15px;
+  color: #fff !important;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: #ffd700 !important;
+}
+
+header.home {
+  background: url("./images/hero1.png") no-repeat center center/cover;
+  height: 100vh;
+  background-size: 100%;
+  background-position: center 50%;
+  background-attachment: fixed;
+  z-index: -1;
+  animation: zoomBackground 3s 1 forwards 0.5s;
+}
+
+@keyframes zoomBackground {
+  from {
+    background-size: 100%;
+  }
+  to {
+    background-size: 140%;
+  }
+}
+
+.hero {
+  display: flex;
+  height: calc(100vh - 40px);
+  /* height: 100vh; */
+  align-items: center;
+  color: #fff;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffd700;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: slideIn 1s forwards;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hero-description {
+  font-size: 1.25rem;
+  margin: 20px 0;
+}
+
+.btn-primary {
+  background-color: #5935d5;
+  border: none;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 25px;
+}
+
+.btn-primary:hover {
+  background-color: #ffd700;
+}
+
+.black_bg {
+  background: #00000070;
+  /* padding: 40px; */
+}
+
+@media screen and (max-width: 600px) {
+  .hero-description {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+    .hero-title {
+        font-size: 2.5rem;    
+    }
+  }
+
+.marquee {
+  width: 100%;
+  background-color: #151414;
+  color: #fff;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  position: relative;
+  height: 80px; /* Adjust to match the example */
+  display: flex;
+  align-items: center;
+}
+
+.marquee p {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 15s linear infinite;
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.25rem;
+  padding-top: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.about-us-section {
+  background-color: #121212;
+}
+
+.about-us-section .col-md-6 {
+  margin-bottom: 1rem;
+}
+
+.about-us-section h2 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.about-us-section p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-us-section .btn {
+  font-size: 1.2rem;
+  padding: 0.75rem 1.5rem;
+}
+
+/* Portfolio Section */
+.portfolio-section {
+  background-color: #1e1e1e;
+  color: white;
+}
+.portfolio-section h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+.portfolio-section .card {
+  border: none;
+  margin-bottom: 2rem;
+}
+.portfolio-section .card img {
+  height: 200px;
+  object-fit: cover;
+}
+.portfolio-section .card-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
+}
+.portfolio-section .card-text {
+  font-size: 1rem;
+}
+
+/* .card-body {
+  color: black;
+} */
+
+/* Blog Section */
+.blog-section h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+.blog-section .card {
+  border: none;
+  margin-bottom: 2rem;
+}
+.blog-section .card img {
+  height: 560px;
+  object-fit: cover;
+}
+.blog-section .card-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
+}
+.blog-section .card-text {
+  font-size: 1rem;
+}
+
+/* Contact Section */
+.contact-section {
+  background-color: #1e1e1e;
+  color: white;
+}
+.contact-section h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+.contact-section .form-label {
+  font-size: 1rem;
+}
+.contact-section .form-control {
+  background-color: #333;
+  border: none;
+  color: white;
+}
+.contact-section .btn-primary {
+  background-color: #1e88e5;
+  border: none;
+}
+
+/* Footer */
+.footer {
+  background-color: #1e1e1e;
+  color: white;
+}
+.footer p {
+  margin: 0;
+  font-size: 1rem;
+}
